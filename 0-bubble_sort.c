@@ -1,7 +1,14 @@
 #include "sort.h"
 
-void
-bubble_sort(int *array, size_t size)
+/**
+ * bubble_sort - Sorts an array by means of the bubble sort algorithm.
+ *
+ * @array: Array to test.
+ * @size: size of the array.
+ *
+*/
+
+void bubble_sort(int *array, size_t size)
 {
 	size_t i = 0, j = 0, temp = 0;
 
