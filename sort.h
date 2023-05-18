@@ -35,5 +35,9 @@ void selection_sort(int *array, size_t size);
 
 /* Quick sort */
 void quick_sort(int *array, size_t size);
+int partition(int *array, size_t low, int high, size_t size);
+void quickSortRecursive(int arr[], int low, int high, size_t size);
+void swap(int *a, int *b);
+
 
 #endif

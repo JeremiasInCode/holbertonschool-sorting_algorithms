@@ -20,7 +20,7 @@ quick_sort(int *array, size_t size)
 void
 quickSortRecursive(int arr[], int low, int high, size_t size)
 {
-      // Llamada recursiva para ordenar las mitades del arraqy.
+      /* Llamada recursiva para ordenar las mitades del arraqy.*/
       if (low < high)
       {
             int pivotIndex = partition(arr, low, high, size);
