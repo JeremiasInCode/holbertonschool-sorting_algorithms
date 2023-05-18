@@ -11,10 +11,25 @@
 void
 quick_sort(int *array, size_t size)
 {
-      if (!array || !size)
+      if (!array || !size || is_sorted(array, size))
             return;
 
       quickSortRecursive(array, 0, size - 1, size);
+}
+
+int
+is_sorted(int *array, size_t size) 
+{
+      size_t i = 0;
+      
+      for (i = 0; i < size - 1; i++) 
+      {
+            if (array[i] > array[i + 1]) 
+            {
+                  return (1);
+            }
+      }
+      return (0);
 }
 
 void
