@@ -38,7 +38,7 @@ void quick_sort(int *array, size_t size);
 int partition(int *array, size_t low, int high, size_t size);
 void quickSortRecursive(int arr[], int low, int high, size_t size);
 int is_sorted(int *array, size_t size_t);
-void swap(int *a, int *b);
+void swap(int *array, int low, int high, size_t size);
 
 
 #endif

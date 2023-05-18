@@ -11,9 +11,10 @@
 void
 quick_sort(int *array, size_t size)
 {
-      if (!array || !size || is_sorted(array, size))
+      if (!array || !size || is_sorted(array, size) == 0)
+      {
             return;
-
+      }
       quickSortRecursive(array, 0, size - 1, size);
 }
 
@@ -35,11 +36,15 @@ is_sorted(int *array, size_t size)
 void
 quickSortRecursive(int arr[], int low, int high, size_t size)
 {
+      int pivotIndex = 0;
+
       /* Llamada recursiva para ordenar las mitades del arraqy.*/
       if (low < high)
       {
-            int pivotIndex = partition(arr, low, high, size);
+            pivotIndex = partition(arr, low, high, size);
+            /* Left */
             quickSortRecursive(arr, low, pivotIndex - 1, size);
+            /* Right */
             quickSortRecursive(arr, pivotIndex + 1, high, size);
       }
 }
@@ -58,13 +63,12 @@ quickSortRecursive(int arr[], int low, int high, size_t size)
 
 int partition(int *array, size_t low, int high, size_t size)
 {
-      int i, j;
-      int pivot = 0;
+      int i = 0, j = 0, pivot = 0;
 
       pivot = array[high];
-      i = (low - 1);
+      i = low - 1;
 
-      for (j = low; j <= high - 1; j++)
+      for (j = low; j <= high; j++)
       {
             /**
              * If the current value is smaller than the pivot,
@@ -74,24 +78,25 @@ int partition(int *array, size_t low, int high, size_t size)
             if (array[j] < pivot)
             {
                   i++;
-                  swap(&array[i], &array[j]);
-                  print_array(array, size);
+                  swap(array, i, j, size);
             }
       }
       /*pivot in the final position*/
-      if (array[i + 1] != array[high])
-      {
-            swap(&array[i + 1], &array[high]);
-            print_array(array, size);
-      }
+      swap(array, i + 1, high, size);
       /*Position of the pivot*/
       return (i + 1);
 }
 
 void
-swap(int *a, int *b)
+swap(int *array, int low, int high, size_t size)
 {
-      size_t aux = *a;
-      *a = *b;
-      *b = aux;
+      int aux = 0;
+
+      if (array[low] != array[high])
+      {
+            aux = array[low];
+            array[low] = array[high];
+            array[high] = aux;
+            print_array(array, size);
+      }
 }
