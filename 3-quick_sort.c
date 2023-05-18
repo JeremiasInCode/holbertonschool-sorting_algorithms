@@ -64,8 +64,11 @@ int partition(int *array, size_t low, int high, size_t size)
             }
       }
       /*pivot in the final position*/
-      swap(&array[i + 1], &array[high]);
-      print_array(array, size);
+      if (array[i + 1] != array[high])
+      {
+            swap(&array[i + 1], &array[high]);
+            print_array(array, size);
+      }
       /*Position of the pivot*/
       return (i + 1);
 }
