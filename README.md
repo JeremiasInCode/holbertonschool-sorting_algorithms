@@ -2,22 +2,23 @@
 
 En este repositorio se encuentran implementados diversos algoritmos de ordenamiento en el lenguaje C. A continuación se presenta una breve descripción de cada algoritmo junto con su complejidad temporal.
 
+<br>
+
 ## Bubble Sort
 
 El algoritmo Bubble Sort es un algoritmo simple de ordenamiento que funciona comparando repetidamente elementos adyacentes y intercambiándolos si están en el orden incorrecto. El proceso se repite hasta que la lista esté completamente ordenada.
-
+<br>
 ### Complejidad Temporal:
-
 Peor caso: O(n^2)
 Caso promedio: O(n^2)
 Mejor caso (optimizado): O(n) - cuando la lista ya está ordenada
 
-
+<br>
 
 ### Quick Sort
 
 El algoritmo Quick Sort es un algoritmo de ordenamiento recursivo y eficiente que se basa en el principio de divide y conquistar. Funciona seleccionando un elemento como pivote y particionando la lista en dos subconjuntos: elementos menores al pivote y elementos mayores al pivote. Luego, se aplica recursivamente el algoritmo a cada subconjunto hasta que la lista esté completamente ordenada.
-
+<br>
 **Complejidad Temporal:**
 - Peor caso: O(n^2)
 - Caso promedio: O(n log n)
