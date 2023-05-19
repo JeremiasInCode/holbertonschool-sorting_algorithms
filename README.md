@@ -42,7 +42,8 @@ El algoritmo de Insertion Sort es un algoritmo de ordenamiento simple y eficient
 
 El algoritmo Quick Sort es un algoritmo de ordenamiento recursivo y eficiente que se basa en el principio de divide y conquistar. Funciona seleccionando un elemento como pivote y particionando la lista en dos subconjuntos: elementos menores al pivote y elementos mayores al pivote. Luego, se aplica recursivamente el algoritmo a cada subconjunto hasta que la lista esté completamente ordenada.
 <br>
-**Complejidad Temporal:**
+
+### Complejidad Temporal:
 - Peor caso: O(n^2)
 - Caso promedio: O(n log n)
 - Mejor caso (optimizado): O(n log n)
