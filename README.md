@@ -1,4 +1,4 @@
-### Sorting Algorithms
+# Sorting Algorithms
 
 En este repositorio se encuentran implementados diversos algoritmos de ordenamiento en el lenguaje C. A continuación se presenta una breve descripción de cada algoritmo junto con su complejidad temporal.
 
@@ -38,8 +38,7 @@ El algoritmo de Insertion Sort es un algoritmo de ordenamiento simple y eficient
 
 <br>
 
-### Quick Sort
-
+## Quick Sort
 El algoritmo Quick Sort es un algoritmo de ordenamiento recursivo y eficiente que se basa en el principio de divide y conquistar. Funciona seleccionando un elemento como pivote y particionando la lista en dos subconjuntos: elementos menores al pivote y elementos mayores al pivote. Luego, se aplica recursivamente el algoritmo a cada subconjunto hasta que la lista esté completamente ordenada.
 <br>
 
